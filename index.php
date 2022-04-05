@@ -52,7 +52,7 @@ include('templates/header.php');
                         <p class="item__price--normal"><?= $matela["price"] ?> €</p>
                         <p class="item__price--promo"><?= $matela["price"] - $matela["promo"] ?> €</p>
                     </div>
-                    <a class="item__erase" href="index.php?supprimer=<?=$matela['id'] ?>">Supprimer</a>
+                    <a id="erase1" class="item__erase" href="index.php?supprimer=<?=$matela['id'] ?>">Supprimer</a>
                 </div>
                 
             <?php

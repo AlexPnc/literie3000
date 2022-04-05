@@ -5,17 +5,16 @@
     margin: 5rem 10rem;
 }
 
-// HEADER 
-header {
-    position: relative;
-    margin-bottom: 3rem;
+header .hide {
+    display: none !important; 
 }
 
-header img {
-    width: 40rem;
+.tool-btn {
+    display: none;
 }
 
-header .btn {
+header .show {
+    display: block;
     position: absolute;
     right: 0rem;
     top: 1.8rem;
@@ -28,6 +27,50 @@ header .btn {
     background: v.$color-primary;
     outline: none;
     border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+// HEADER 
+header {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+header img {
+    width: 40rem;
+}
+
+header .add-btn {
+    position: absolute;
+    right: 0rem;
+    top: 1.8rem;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    color: v.$white;
+    text-decoration: none;
+    padding: 1.2rem 3.4rem;
+    background: v.$color-primary;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+header .presentation-btn {
+    position: absolute;
+    right: 34rem;
+    top: 1.8rem;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    color: v.$color-primary;
+    text-decoration: none;
+    padding: 1.2rem 3.4rem;
+    background: v.$white;
+    outline: none;
+    border: 1px solid v.$color-primary;
     cursor: pointer;
     border-radius: 0.5rem;
 }

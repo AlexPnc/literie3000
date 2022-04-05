@@ -17,16 +17,16 @@ body {
   margin: 5rem 10rem;
 }
 
-header {
-  position: relative;
-  margin-bottom: 3rem;
+header .hide {
+  display: none !important;
 }
 
-header img {
-  width: 40rem;
+.tool-btn {
+  display: none;
 }
 
-header .btn {
+header .show {
+  display: block;
   position: absolute;
   right: 0rem;
   top: 1.8rem;
@@ -39,6 +39,49 @@ header .btn {
   background: #0C4085;
   outline: none;
   border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+header {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+header img {
+  width: 40rem;
+}
+
+header .add-btn {
+  position: absolute;
+  right: 0rem;
+  top: 1.8rem;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 1.2rem 3.4rem;
+  background: #0C4085;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+header .presentation-btn {
+  position: absolute;
+  right: 34rem;
+  top: 1.8rem;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #0C4085;
+  text-decoration: none;
+  padding: 1.2rem 3.4rem;
+  background: #f1f1f1;
+  outline: none;
+  border: 1px solid #0C4085;
   cursor: pointer;
   border-radius: 0.5rem;
 }
