@@ -62,7 +62,7 @@ include("templates/header.php")
     </div>
 
     <div class="form__group">
-        <label for="inputImage">Photo de la recette :</label>
+        <label for="inputImage">Photo du matelas :</label>
         <input id="inputImage" name="image" type="text" value="<?= isset($image) ? $image : "" ?>">
         <?php
         if (isset($errors["picture"])) {

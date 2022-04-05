@@ -13,4 +13,31 @@ body {
   background: #f1f1f1;
 }
 
+.pagination {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.pagination .pagination__item {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
+.pagination .pagination__item a {
+  color: #111111;
+  border: 0.2rem solid #111111;
+  padding: 1.5rem 2rem;
+}
+
+.pagination .pagination__item.active a {
+  color: #c5c5c5;
+  border-color: #c5c5c5;
+  cursor: default;
+}
+
+.pagination .pagination__item:not(.active) a:hover {
+  background-color: #111111;
+  color: #f2f0f1;
+}
+
 /*# sourceMappingURL=style.css.map */
