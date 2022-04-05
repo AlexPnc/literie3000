@@ -13,6 +13,99 @@ body {
   background: #f1f1f1;
 }
 
+.container-app {
+  margin: 5rem 10rem;
+}
+
+header {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+header img {
+  width: 40rem;
+}
+
+header .btn {
+  position: absolute;
+  right: 0rem;
+  top: 1.8rem;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 1.2rem 3.4rem;
+  background: #0C4085;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+header .btn:hover {
+  transform: scale(0.95);
+}
+
+.home__item {
+  position: relative;
+  display: flex;
+  margin-bottom: 3rem;
+  background: white;
+}
+
+.home__item img {
+  width: 40rem;
+}
+
+.item__details {
+  margin-left: 4rem;
+  margin-top: 4rem;
+}
+.item__details h3 {
+  font-size: 8rem;
+  color: #0C4085;
+}
+.item__details p {
+  font-size: 2.5rem;
+}
+
+.item__trait {
+  position: absolute;
+  right: 40rem;
+  top: 2rem;
+  height: 35rem;
+  width: 0.12rem;
+  background-color: #c4c2c2;
+}
+
+.item__price {
+  align-self: center;
+  position: absolute;
+  right: 12rem;
+}
+.item__price--promo {
+  color: red;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.item__price--normal {
+  margin-left: 2rem;
+  text-decoration: line-through;
+  font-size: 2.5rem;
+}
+
+.item__erase {
+  position: absolute;
+  right: 14rem;
+  bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid red;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: red;
+}
+
 .pagination {
   padding: 2rem 0;
   text-align: center;
@@ -38,6 +131,54 @@ body {
 .pagination .pagination__item:not(.active) a:hover {
   background-color: #111111;
   color: #f2f0f1;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 1rem;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+form .form__group {
+  flex-basis: 100%;
+  padding: 0 3rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 991px) {
+  form .form__group {
+    flex-basis: 50%;
+  }
+}
+form .form__group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+form .form__group input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 0;
+  box-shadow: 0 0 1rem #ddd;
+}
+
+.form__button {
+  font-family: "Filson Soft";
+  font-size: 1.8rem;
+  background-color: #0C4085;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

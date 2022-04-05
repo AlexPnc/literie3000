@@ -20,67 +20,66 @@ if ($result) {
     $length = $result[0];
 }
 
+if(isset($_GET['supprimer'])) {
+    $id = $_GET['supprimer'];
+    $db->query("DELETE FROM matelas WHERE id=$id");
+}
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+include('templates/header.php');
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Literie3000</title>
-
-    <link rel="stylesheet" id="typekit-css" href="https://use.typekit.net/oek3jfu.css?ver=1.0.4" type="text/css" media="all">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-    <?php
-    include('templates/header.php');
-    ?>
-
-    <main>
-        <div class="home">
-            <div class="home__items">
-                <?php
-                foreach ($matelas as $matela) {
-
-                ?>
-                    <div class="home__item">
-
-                        <img src="<?= $matela["image"] ?>" alt="">
-                        <div class="item__details">
-                            <h3>
-                                <?= $matela["name"] ?>
-                            </h3>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
+<main>
+    <div class="home">
+        <div class="home__items">
             <?php
-            if ($length > $limit) {
-                $pages = ceil($length / $limit);
+            foreach ($matelas as $matela) {
+
             ?>
-                <ul class="pagination">
-                    <?php
-                    for ($i = 1; $i <= $pages; $i++) {
-                    ?>
-                        <li class="pagination__item <?= $i == $page ? "active" : "" ?>">
-                            <a rel="nofollow" href="index.php?page=<?= $i ?>"><?= $i ?></a>
-                        </li>
-                    <?php
-                    }
-                    ?>
-                </ul>
+                <div class="home__item">
+
+                    <img src="<?= $matela["image"] ?>" alt="">
+                    <div class="item__details">
+                        <h3>
+                            <?= $matela["name"] ?>
+                        </h3>
+                        <p><?= $matela["marque"] ?></p>
+                        <p>Dimensions :<?= $matela["dimension"] ?></p>
+                    </div>
+                    <div class="item__trait"></div>
+                    <div class="item__price">
+                        <p class="item__price--normal"><?= $matela["price"] ?> €</p>
+                        <p class="item__price--promo"><?= $matela["price"] - $matela["promo"] ?> €</p>
+                    </div>
+                    <a class="item__erase" href="index.php?supprimer=<?=$matela['id'] ?>">Supprimer</a>
+                </div>
+                
             <?php
             }
             ?>
         </div>
-    </main>
+        <?php
+        if ($length > $limit) {
+            $pages = ceil($length / $limit);
+        ?>
+            <ul class="pagination">
+                <?php
+                for ($i = 1; $i <= $pages; $i++) {
+                ?>
+                    <li class="pagination__item <?= $i == $page ? "active" : "" ?>">
+                        <a rel="nofollow" href="index.php?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php
+                }
+                ?>
+            </ul>
+        <?php
+        }
+        ?>
+    </div>
+</main>
 
-    <?php
-    include('templates/footer.php');
-    ?>
+<?php
+include('templates/footer.php');
+?>
